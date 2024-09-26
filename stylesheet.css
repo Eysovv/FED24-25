@@ -1,30 +1,46 @@
 :root{
     --white: white;
-    --grey: lightgrey;
+    --grey: rgb(244, 244, 244);
+    --darkgrey: rgb(200, 200, 200);
     --black: black;
     }
 
+/* Zorg ervoor dat de afbeelding onder de header staat */
+#header-background {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative; 
+    z-index: -1;
+    margin-top: -20px;
+}
 
+/* Pas de header aan zodat het boven de afbeelding zweeft */
 header {
-    margin: 20px;
-    padding: 15px;
-    background-color: white;
-    }
+    margin: 0;
+    padding: 1em;
+    background-color: var(--white);
+    position: absolute; /* Plaats het boven de afbeelding */
+    top: 1em;
+    left: 1em;
+    width: 90%;
+    z-index: 10; /* Zorg dat de header voor de afbeelding komt */
+    box-sizing: border-box;
+}
 
-    /* Lijststijl verwijderen en flexbox voor uitlijning */
-    header ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-    }
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
 
-    /* Iconen in de lijst items */
-    header ul li img {
-        height: 15px;
-    }
+
+header ul li img {
+    height: 15px;
+}
 
     /* Bewegende tekst */
     header ul li:nth-child(2) {
@@ -53,30 +69,55 @@ header {
 
 body{
     font-family: Helvetica, Arial, sans-serif;
-
-    background-image: url('afbeeldingen/header_background.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
     background-color: var(--grey);
+    margin: 0;
 }
 
-#top{
+main{
+    padding-bottom: 1em;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+h3{
+    font-size: 1.8em;
+    font-weight: 590;
+}
+
+h4{
+    font-weight: lighter;
+    font-size: 1.2em;
+}
+
+h5{
+    font-size: larger;
+    font-weight: 500;
+}
+
+p{
+    font-size: smaller;
+}
+
+#top {
     display: block;
-    align-self: flex-end;
     text-align: center;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), black);
-    margin-top: 790px;
+    position: absolute; /* Plaats het artikel bovenop de afbeelding */
+    bottom: 4em; /* Zorgt ervoor dat het aan de onderkant staat */
+    width: 100%; /* Vul de breedte van de afbeelding */
+    z-index: 5; /* Zorg dat het zichtbaar is boven de afbeelding */
 }
 
-#top h1{
+#top h1 {
     color: var(--white);
     font-size: 0.8em;
     font-weight: 600;
 }
 
-#top h2{
+#top h2 {
     color: var(--white);
     font-size: 29px;
     letter-spacing: -1px;
@@ -84,28 +125,365 @@ body{
     margin-block-end: 0em;
 }
 
-#top a{
+#top a {
     color: var(--black);
     -webkit-text-stroke: 2px var(--white);
     font-size: 29px;
     letter-spacing: -1px;
 }
 
-article #section1{
+#section1 {
+    display: flex;
+    gap: 1em;
+    overflow-x: auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#card1, #card2 {
     background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2em 2em max-content 2em;
+    max-width: 420px;
+    grid-gap: 1em;
+    padding: 1em;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    min-width: 420px;
+}
+
+#card1 h3, #card2 h3{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-left: 0.5em;
+}
+
+#card1 h4, #card2 h4 {
+    grid-row-start: 2;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0.5em;
+}
+
+#card1 img, #card2 img {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    max-width: 100%;
+    max-height: 18em;
+}
+
+#card1 button, #card2 button {
+    grid-row-start: 4;
+    background: var(--white);
+    border-style: solid;
+    border-color: var(--grey);
+    align-items: center;
+    height: 3em;
+}
+
+#card2 button{
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+
+article:nth-child(2){
+    background: var(--white);
+}
+
+#section2{
+    background: var(--white);
+    display: grid;
+}
+
+#section2heading{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 4em;
+}
+
+#section2heading h3{
+    transform: translateX(0.5em);
+    margin-left: 0.5em;
+}
+
+#viewall{
+    border-radius: 0;
+    border: 0;
+    height: 2.5em;
+    width: 5.5em;
+    align-self: center;
+}
+
+#section2heading button{
+    margin-left: 1.5em;
+}
+
+#section2cards {
+    display: flex;
+    justify-content: space-between; /* Verdeelt de items met ruimte ertussen */
+    width: 100%; /* Zorgt dat de container de volledige breedte van de pagina gebruikt */
+    gap: 1em; /* Zorgt voor ruimte tussen de items */
+    overflow-x: auto;
+    background: var(--white);
+    padding: 1em;
+}
+
+#section2cards > * {
+    flex: 1 1 calc(25% - 1em); /* Maakt elk item 25% van de containerbreedte minus de gap */
+    box-sizing: border-box; /* Zodat padding en borders binnen de breedte vallen */
+    position: relative;
+}
+
+#section2cards li img{
+    width: 300px;
     display: block;
 }
 
-#foto1{
-    max-width: 375px; max-height: 250px;
+#section2cards li button{
+    margin: 1em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0.8em;
+    margin: 0;
+    border: 0;
+    border-radius: 0%;
+    background: var(--white);
+    width: 90%;
+    height: 2em;
+    text-align: left;
 }
 
-article #section2{
-    background-color: var(--white);
+#section3{
+    background: var(--white);
+}
+
+#section3heading{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 1em;
+    padding-bottom: 0em;
+    margin-top: 1em;
+    height: 4.5em;
+}
+
+#section3heading h3, #section3heading h4{
+    margin-left: 0.5em;
+}
+
+#section3heading button{
+    grid-column-start: 4;
+}
+
+#section3cards li{
+    display: block;
+    position: relative;
+    max-width: 420px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
+#section3cards li h5 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    background-image: linear-gradient(var(--black), rgba(0, 0, 0, 0));
+    padding: 1em;
+    top: -1.6em;
+    width: 82%;
+}
+
+#section3cards li img{
+    max-width: 100%;
     display: block;
 }
 
-#foto2{
-    max-width: 375px; max-height: 250px;
+#section3cards li button {
+    position: absolute;
+    bottom: 2em; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    border: 0;
+    padding: 1em;
+    width: 84%;
+    text-align: left;
+}
 
+#section4 {
+    background: var(--white);
+    display: flex;
+    flex-wrap: nowrap; /* Voorkom dat items naar een nieuwe regel springen */
+    overflow-x: auto; /* Maak de container horizontaal scrollbaar */
+    gap: 1em; /* Ruimte tussen de items */
+    padding: 1em;
+    width: 100%; /* Laat de sectie de volledige breedte van de viewport innemen */
+}
+
+#section4 li {
+    background: var(--grey);
+    display: flex;
+    flex-direction: column; /* Zorg dat de content binnen elk item verticaal wordt gestapeld */
+    justify-content: space-between; /* Verdeel de content binnen het item gelijkmatig */
+    align-items: center; /* Centreer de items horizontaal */
+    min-width: 18em; /* Gebruik min-width om de breedte van elk item te behouden */
+    box-sizing: border-box; /* Zorg ervoor dat padding en borders binnen de breedte vallen */
+}
+
+#section4 li h3{
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#section4 li p {
+    text-align: center;
+    padding: 1em;
+}
+
+#section4 li img {
+    max-width: 18em; /* Behoud de maximale breedte van de afbeelding */
+    width: 100%; /* Zorg ervoor dat de afbeelding flexibel is binnen het item */
+}
+
+#section4 li button{
+    margin-bottom: 1em;
+    border: 0;
+    background: var(--white);
+    width: 90%;
+    height: 2em;
+    text-align: left;
+}
+
+#section5{
+    max-width: 26.875em;
+}
+
+#section5heading{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 1em;
+    grid-gap: 1em;
+}
+
+#section5heading h3, h4{
+    margin: 0;
+}
+
+#section5heading button{
+    grid-column-start: 4;
+    background-color: var(--white);
+}
+
+#section5card{
+    display: block;
+    position: relative;
+    padding-top: 0;
+}
+
+#section5card img{
+    width: 26em;
+    height: max-content;
+}
+
+#section5card h3{
+    color: var(--white);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), var(--black));
+    position: absolute;
+    bottom: -1em;
+    width: 100%;
+    height: 2em;
+    padding: 0.5em;
+    padding-bottom: 0;
+}
+
+#helpme{
+    display: grid;
+    margin: 0.5em;
+    margin-top: 1em;
+}
+
+#helpme h3{
+    background-color: white;
+    padding: 0.4em;
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+#footersection{
+    margin: 0.5em;
+}
+
+#footersection h3{
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+#footersection li{
+    background: var(--white);
+    padding: 1em;
+}
+
+#footersection li img{
+    width: 22em;
+    margin-left: 0.5em;
+}
+
+#email, #genderman, #genderwoman, #agree{
+    font-size: smaller;
+}
+
+#email{
+    color: var(--darkgrey);
+    width: 100%;
+    height: 3em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-color: var(--darkgrey);
+    border-style: solid;
+}
+
+#genderwoman{
+    margin-left: 2em;
+}
+
+#agree{
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+}
+
+#subscribe{
+    color: var(--white);
+    background-color: var(--darkgrey);
+    border: 0;
+    height: 4em;
+    width: 100%;
+}
+
+
+/* hier begint de css code voor elementen van productpagina die verdere styling nodig hadden*/
+
+
+#slideshow{
+    display: flex; /* Zorgt ervoor dat de afbeeldingen naast elkaar staan */
+    overflow-x: auto; /* Maakt het horizontaal scrollbaar */
+    scroll-snap-type: x mandatory; /* Voor smooth scrollen tussen afbeeldingen */
+    gap: 0.5em; /* Optioneel: zorgt voor ruimte tussen de afbeeldingen */
+    width: 100vw;
+}
+
+#slideshow img{
+    width: 430px; /* Zorgt ervoor dat elke afbeelding 430px breed is */
+    flex-shrink: 0; /* Voorkomt dat afbeeldingen krimpen */
+    scroll-snap-align: start;
+}
+
+#slideshow::-webkit-scrollbar{
+    display: none;
 }
