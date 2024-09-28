@@ -5,26 +5,31 @@
     --black: black;
     }
 
-/* Zorg ervoor dat de afbeelding onder de header staat */
+body.dark-mode{
+    --white: rgb(80, 80, 80);
+    --grey: rgb(50, 50, 50);
+    --darkgrey: rgb(80, 80, 80);
+    --black: white;
+}
+
 #header-background {
     width: 100%;
     height: auto;
     display: block;
     position: relative; 
     z-index: -1;
-    margin-top: -20px;
+    margin-top: 0;
 }
 
-/* Pas de header aan zodat het boven de afbeelding zweeft */
 header {
     margin: 0;
     padding: 1em;
     background-color: var(--white);
-    position: absolute; /* Plaats het boven de afbeelding */
+    position: fixed;
     top: 1em;
     left: 1em;
-    width: 90%;
-    z-index: 10; /* Zorg dat de header voor de afbeelding komt */
+    width: 93%;
+    z-index: 10;
     box-sizing: border-box;
 }
 
@@ -86,29 +91,38 @@ ul{
 h3{
     font-size: 1.8em;
     font-weight: 590;
+    color: var(--black);
 }
 
 h4{
     font-weight: lighter;
     font-size: 1.2em;
+    color: var(--black);
 }
 
 h5{
     font-size: larger;
     font-weight: 500;
+    color: var(--black);
 }
 
 p{
     font-size: smaller;
+    font-weight: lighter;
+    color: var(--black);
+}
+
+h6{
+    color: var(--black);
 }
 
 #top {
     display: block;
     text-align: center;
-    position: absolute; /* Plaats het artikel bovenop de afbeelding */
-    bottom: 4em; /* Zorgt ervoor dat het aan de onderkant staat */
-    width: 100%; /* Vul de breedte van de afbeelding */
-    z-index: 5; /* Zorg dat het zichtbaar is boven de afbeelding */
+    position: absolute;
+    bottom: 4em; 
+    width: 100%;
+    z-index: 5;
 }
 
 #top h1 {
@@ -231,6 +245,7 @@ article:nth-child(2){
     overflow-x: auto;
     background: var(--white);
     padding: 1em;
+    box-sizing: border-box;
 }
 
 #section2cards > * {
@@ -296,8 +311,8 @@ article:nth-child(2){
     color: var(--white);
     background-image: linear-gradient(var(--black), rgba(0, 0, 0, 0));
     padding: 1em;
-    top: -1.6em;
-    width: 82%;
+    top: -1.7em;
+    width: 83%;
 }
 
 #section3cards li img{
@@ -321,20 +336,22 @@ article:nth-child(2){
     background: var(--white);
     display: flex;
     flex-wrap: nowrap; /* Voorkom dat items naar een nieuwe regel springen */
-    overflow-x: auto; /* Maak de container horizontaal scrollbaar */
-    gap: 1em; /* Ruimte tussen de items */
+    overflow-x: auto;
+    gap: 1em;
+    box-sizing: border-box;
     padding: 1em;
-    width: 100%; /* Laat de sectie de volledige breedte van de viewport innemen */
+    width: 100%;
 }
 
 #section4 li {
     background: var(--grey);
     display: flex;
-    flex-direction: column; /* Zorg dat de content binnen elk item verticaal wordt gestapeld */
-    justify-content: space-between; /* Verdeel de content binnen het item gelijkmatig */
-    align-items: center; /* Centreer de items horizontaal */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     min-width: 18em; /* Gebruik min-width om de breedte van elk item te behouden */
-    box-sizing: border-box; /* Zorg ervoor dat padding en borders binnen de breedte vallen */
+    box-sizing: border-box;
+    padding: 1em;
 }
 
 #section4 li h3{
@@ -363,6 +380,7 @@ article:nth-child(2){
 
 #section5{
     max-width: 26.875em;
+    margin-top: 3em;
 }
 
 #section5heading{
@@ -399,30 +417,51 @@ article:nth-child(2){
     bottom: -1em;
     width: 100%;
     height: 2em;
-    padding: 0.5em;
     padding-bottom: 0;
+    padding-left: 0.5em;
+    box-sizing: border-box;
 }
 
 #helpme{
     display: grid;
-    margin: 0.5em;
+    margin: 1em;
     margin-top: 1em;
+    margin-bottom: 0;
 }
 
 #helpme h3{
-    background-color: white;
-    padding: 0.4em;
+    background-color: var(--white);
+    padding-left: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.3em;
     margin: 0;
     margin-bottom: 0.5em;
+    border: solid 1px var(--grey);
+}
+
+.content{
+    margin-bottom: 2em;
+}
+
+.content p{
+    background-color: var(--grey);
+    padding: 1.2em;
+    margin-top: 0.1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    box-sizing: border-box;
 }
 
 #footersection{
-    margin: 0.5em;
+    margin: 1em;
+    margin-top: 0;
+    border: solid 1px var(--grey);
 }
 
 #footersection h3{
     margin: 0;
     margin-bottom: 0.5em;
+    color: var(--black);
 }
 
 #footersection li{
@@ -437,6 +476,7 @@ article:nth-child(2){
 
 #email, #genderman, #genderwoman, #agree{
     font-size: smaller;
+    color: var(--black);
 }
 
 #email{
@@ -447,10 +487,6 @@ article:nth-child(2){
     margin-bottom: 2em;
     border-color: var(--darkgrey);
     border-style: solid;
-}
-
-#genderwoman{
-    margin-left: 2em;
 }
 
 #agree{
@@ -470,20 +506,116 @@ article:nth-child(2){
 /* hier begint de css code voor elementen van productpagina die verdere styling nodig hadden*/
 
 
+#product{
+    background-color: var(--white);
+}
+
 #slideshow{
-    display: flex; /* Zorgt ervoor dat de afbeeldingen naast elkaar staan */
-    overflow-x: auto; /* Maakt het horizontaal scrollbaar */
+    display: flex;
+    overflow-x: auto;
     scroll-snap-type: x mandatory; /* Voor smooth scrollen tussen afbeeldingen */
-    gap: 0.5em; /* Optioneel: zorgt voor ruimte tussen de afbeeldingen */
+    gap: 0.5em;
     width: 100vw;
 }
 
 #slideshow img{
-    width: 430px; /* Zorgt ervoor dat elke afbeelding 430px breed is */
+    width: 430px;
     flex-shrink: 0; /* Voorkomt dat afbeeldingen krimpen */
     scroll-snap-align: start;
 }
 
 #slideshow::-webkit-scrollbar{
     display: none;
+}
+
+#description{
+    box-sizing: border-box;
+    padding: 1em;
+    background-color: var(--white);
+    margin-bottom: 5em;
+}
+
+#description p{
+    padding-left: 1em;
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+#description h3{
+    padding-left: 0.5em;
+    margin-bottom: 0;
+}
+
+#prize{
+    font-weight: normal;
+    padding-top: 1em;
+}
+
+#bordered{
+    margin-bottom: 1em;
+}
+ 
+#bordered p{
+    border: 1px solid var(--grey);
+    padding: 1em;
+    margin: 0;
+}
+
+#boxed p{
+    background-color: var(--grey);
+    padding: 1em;
+    margin: 0;
+    margin-top: 0.1em;
+    font-weight: normal;
+}
+
+#sugg{
+    display: flex;
+    padding-left: 1em;
+}
+
+#sugg h3{
+    padding-left: 0.5em;
+    padding-right: 0.2em;
+    margin: 0;
+}
+
+#recom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+#recom li{
+    display: grid;
+    background-color: var(--grey);
+}
+
+#recom li *:not(h6) {
+    padding-left: 0;
+  }
+
+#recom li img{
+    width: 100%;
+    padding-bottom: 2em;
+}
+
+#recom li h6, #recom li p, #recom li button{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#recom h6, p{
+    margin: 0;
+}
+
+#quick{
+    border: 0.1px solid var(--darkgrey);
+    height: 2em;
+    background-color: var(--white);
+    margin-top: 1em;
+    margin: 1em;
 }

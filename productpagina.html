@@ -6,7 +6,7 @@
     <title>Productpagina</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body>
+<body id="product">
     <header>
         <ul>
             <li><img id="login" src="afbeeldingen/icon_login.png" alt="login icoon"></li>
@@ -18,60 +18,73 @@
     <article id="slideshow">
         <img src="afbeeldingen/ppa1.jpg" alt="">
         <img src="afbeeldingen/ppa2.jpg" alt="">
-        <img src="afbeeldingen/ppa2.jpg" alt="">
         <img src="afbeeldingen/ppa3.jpg" alt="">
+        <img src="afbeeldingen/ppa4.jpg" alt="">
     </article>
 
     <article id="description">
         <h3>Our Legacy</h3>
         <p>Men's Full Zip Hoodie Boston Check</p>
-        <p>€420,00</p>
-        <p>Free Shipping Over €250 EUR</p>
-        <p>Pay over 3 interest-free payments of € 140,00 with Klarna. Learn more</p>
-        <p>DETAILS</p>
-        <p>SHIPPING & RETURN</p>
+        <p id="prize">€420,00 EUR</p>
+        <div id="bordered">
+            <p>Free Shipping Over €250 EUR</p>
+            <p>Pay over 3 interest-free payments of € 140,00 with Klarna.</p>
+        </div>
+        <div id="boxed">
+            <p>DETAILS</p>
+            <p>SHIPPING & RETURN</p>
+        </div>
     </article>
     
-    <h3>You May Also Like</h3>
+    <div id="sugg">
+        <h3>You May Also Like</h3>
+        <h4>4 Products</h4>
+    </div>
 
     <ul id="recom">
         <li>
             <img src="afbeeldingen/ppa1.jpg" alt="">
             <label for="" value="New"></label>
-            <h5>Our Legacy</h5>
+            <h6>Our Legacy</h6>
             <p>Men's Full Zip Hoodie Boston Check</p>
-            <p>€420,00</p>
+            <p id="prize">€420,00 EUR</p>
             <button id="quick">Quick shop</button>
         </li>
         <li>
             <img src="afbeeldingen/ppb1.jpg" alt="">
             <label for="" value="New"></label>
-            <h5>Our Legacy</h5>
+            <h6>Our Legacy</h6>
             <p>Full Zip Hoodie Black</p>
-            <p>€390,00</p>
+            <p id="prize">€390,00 EUR</p>
             <button id="quick">Quick shop</button>
         </li>
         <li>
             <img src="afbeeldingen/ppb2.jpg" alt="">
             <label for="" value="New"></label>
-            <h5>Our Legacy</h5>
+            <h6>Our Legacy</h6>
             <p>Men's Full Zip Hoodie Antracite</p>
-            <p>€470,00</p>
+            <p id="prize">€470,00 EUR</p>
             <button id="quick">Quick shop</button>
         </li>
         <li>
             <img src="afbeeldingen/ppb3.jpg" alt="">
             <label for="" value="New"></label>
-            <h5>Our Legacy</h5>
+            <h6>Our Legacy</h6>
             <p>Women's Compact Hoodie Black</p>
-            <p>€390,00</p>
+            <p id="prize">€390,00 EUR</p>
             <button id="quick">Quick shop</button>
         </li>
     </ul>
-    
 
     <article id="helpme">
-        <h3>Help</h3>
+        <h3 class="collapsible">Help</h3>
+            <div class="content">
+                <p>Help Desk</p>
+                <p>Contact Us</p>
+                <p>Order Status</p>
+                <p>Return And Exchanges</p>
+                <p>Accessibility</p>
+            </div>
         <h3>About</h3>
         <h3>Connect</h3>
     </article>
@@ -93,8 +106,8 @@
         </li>
     </ul>
 
-    <footer>
-        <button>ADD TO CART</button>
-    </footer>
+    <button id="mode-toggle">Toggle Light/Dark Mode</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
