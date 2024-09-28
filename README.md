@@ -37,6 +37,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je opdracht:
   (https://nl.slamjam.com/)
+  (https://nl.slamjam.com/products/our-legacy-clothing-full-zip-hood-brown-j296927?pr_prod_strat=e5_desc&pr_rec_id=99c7c0181&pr_rec_pid=8938811556045&pr_ref_pid=8932148347085&pr_seq=uniform)
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
@@ -228,8 +229,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. ChatGPT Gesprekken
+     - https://chatgpt.com/share/66f87266-cf30-800a-ab5a-9b37f6641f75
+     - https://chatgpt.com/share/66f8728d-2cd0-800a-a5b8-710770fa0bf7
+     - https://chatgpt.com/share/66f872bd-e288-800a-b1fc-a86608c8d2f4
+  3. W3Schools online HTML editor. (z.d.). https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_script_src
+  4. ...
 
 </details>
