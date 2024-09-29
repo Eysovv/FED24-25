@@ -8,7 +8,7 @@
 body.dark-mode{
     --white: rgb(80, 80, 80);
     --grey: rgb(50, 50, 50);
-    --darkgrey: rgb(80, 80, 80);
+    --darkgrey: rgb(240, 240, 240);
     --black: white;
 }
 
@@ -54,6 +54,7 @@ header ul li img {
         flex-grow: 1; /* Zodat de tekst ruimte krijgt tussen de iconen */
         text-align: center;
         position: relative;
+        color: var(--black);
     }
 
     /* De tekst die beweegt */
@@ -76,10 +77,6 @@ body{
     font-family: Helvetica, Arial, sans-serif;
     background-color: var(--grey);
     margin: 0;
-}
-
-main{
-    padding-bottom: 1em;
 }
 
 ul{
@@ -164,7 +161,7 @@ h6{
     max-width: 420px;
     grid-gap: 1em;
     padding: 1em;
-    padding-bottom: 0;
+    padding-bottom: 1.5em;
     box-sizing: border-box;
     min-width: 420px;
 }
@@ -190,6 +187,12 @@ h6{
     max-height: 18em;
 }
 
+#card2 img{
+    max-height: 259px;
+    width: 388px;
+    object-fit: cover;
+}
+
 #card1 button, #card2 button {
     grid-row-start: 4;
     background: var(--white);
@@ -197,6 +200,7 @@ h6{
     border-color: var(--grey);
     align-items: center;
     height: 3em;
+    color: var(--black);
 }
 
 #card2 button{
@@ -225,12 +229,19 @@ article:nth-child(2){
     margin-left: 0.5em;
 }
 
+#section2heading h4{
+    box-sizing: border-box;
+    padding-top: 1.5em;
+    padding-left: 0.5em;
+}
+
 #viewall{
     border-radius: 0;
     border: 0;
     height: 2.5em;
     width: 5.5em;
     align-self: center;
+    color: var(--black);
 }
 
 #section2heading button{
@@ -272,6 +283,7 @@ article:nth-child(2){
     width: 90%;
     height: 2em;
     text-align: left;
+    color: var(--black);
 }
 
 #section3{
@@ -330,6 +342,7 @@ article:nth-child(2){
     padding: 1em;
     width: 84%;
     text-align: left;
+    color: var(--black);
 }
 
 #section4 {
@@ -370,12 +383,12 @@ article:nth-child(2){
 }
 
 #section4 li button{
-    margin-bottom: 1em;
     border: 0;
     background: var(--white);
-    width: 90%;
+    width: 98%;
     height: 2em;
     text-align: left;
+    color: var(--black);
 }
 
 #section5{
@@ -514,7 +527,6 @@ article:nth-child(2){
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory; /* Voor smooth scrollen tussen afbeeldingen */
-    gap: 0.5em;
     width: 100vw;
 }
 
@@ -618,4 +630,16 @@ article:nth-child(2){
     background-color: var(--white);
     margin-top: 1em;
     margin: 1em;
+    color: var(--black);
+}
+
+#mode-toggle{
+    margin: 1em;
+    margin-top: 0;
+    padding: 1em;
+    background: var(--black);
+    color: var(--white);
+    box-shadow: 1p 2px var(--darkgrey);
+    border: none;
+    text-align: center;
 }
