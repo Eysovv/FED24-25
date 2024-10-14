@@ -85,29 +85,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Voortgang 1 (week 2)
 
 <details>
-  <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
-
-  ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
-  ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
-
-  ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+niet aanwezig geweest
 
 </details>
 
@@ -121,26 +99,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
-  ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  Ik liep erg achter dus schouders eronder, + de site heeft een paar elementen met uitdagende code dus daarover advies gevraagd.
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Veel met de lesopdrachten oefenen (grid, flexbox)
+  - Zo veel mogelijk onderdelen van de site namaken
+  - Volle aandacht geven door de opgelopen vertraging
 
 </details>
 
@@ -172,22 +136,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  - Hulp vragen over een onzichtbare padding
+  - 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - grid in een grid niet optimaal --> flexbox gebruiken
 
 </details>
 
@@ -233,7 +188,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
      - https://chatgpt.com/share/66f87266-cf30-800a-ab5a-9b37f6641f75
      - https://chatgpt.com/share/66f8728d-2cd0-800a-a5b8-710770fa0bf7
      - https://chatgpt.com/share/66f872bd-e288-800a-b1fc-a86608c8d2f4
-  3. W3Schools online HTML editor. (z.d.). https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_script_src
-  4. ...
+  3. ( W3Schools online HTML editor. (z.d.). https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_script_src
+  4. (link hyperlinks) W3Schools.com. (z.d.). https://www.w3schools.com/html/html_links.asp
 
 </details>
