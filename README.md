@@ -190,5 +190,7 @@ niet aanwezig geweest
      - https://chatgpt.com/share/66f872bd-e288-800a-b1fc-a86608c8d2f4
   3. ( W3Schools online HTML editor. (z.d.). https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_script_src
   4. (link hyperlinks) W3Schools.com. (z.d.). https://www.w3schools.com/html/html_links.asp
+  5. Scrollbar verwijderen op horizontaal scrollbare secties
+     - How do I remove the horizontal scrollbar in a div? (z.d.). Stack Overflow. https://stackoverflow.com/questions/4405954/how-do-i-remove-the-horizontal-scrollbar-in-a-div
 
 </details>
