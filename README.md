@@ -58,28 +58,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
 
+  - Veel images hebben geen of onduidelijk alt teksten.
+  - Navigeren met de tab toets resulteerd in het openen van (waarschijnlijk) hidden content, en loop je uiteindelijk tegen een blokkade op.
+  - Popup melding op de site heeft een heftige animatie, of eerder video, die misschien gevaarlijk kan zijn voor mensen met epilepsie.
+
   
 
 </details>
-
-
-
-## Breakdownschets (week 1)
-
-<details>
-  <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
-
-  ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
-
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
-
-</details>
-
 
 
 
@@ -122,6 +107,10 @@ niet aanwezig geweest
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  - Alle images hebben nu passende alt teksten, sommige communiceren ook aan mensen met bijv. slecht zicht waar ze in het proces op de website zitten zoals: "laatste productfoto"
+  - Navigeren met Tab heeft nu een logisch hiërarchische volgorde
+  - Wat nog beter kan is de duidleijkheid van knoppen, sommigen communiceren niet heel duidelijk dat ze klikbaar zijn.
+
 </details>
 
 
@@ -134,7 +123,7 @@ niet aanwezig geweest
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik kreeg de stijl onder knie en kon ik goed toepassen alleen had ik nog moeite met de horizontale layout van de verschillende secties op de webpage.
 
 
   ### Agenda voor meeting
@@ -162,15 +151,15 @@ niet aanwezig geweest
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Leren werken met grid en het naar mijn mening goed kunnen nabootsen van de vormgeving van de website. Ook weet ik nu goed hoe ik horizontaal scrollbare secties moet maken
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/readme1.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Een specifieke sectie op de webpage had een animatie waar drie lijsten van woorden in een oneindige loop horizontaal door het beeld bewogen. De bovenste en de onderste van links naar rechts en de middelste van rechts naar links. Uiteindelijk heb ik wel de vormgeving en het scrolle na kunnen maken maar is de loopanimatie me niet gelukt.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/readme2.png" width="375px" alt="bummer">
 </details>
 
 
