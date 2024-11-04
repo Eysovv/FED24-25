@@ -1,0 +1,927 @@
+:root{
+    --white: white;
+    --grey: rgb(244, 244, 244);
+    --darkgrey: rgb(200, 200, 200);
+    --black: black;
+    --h3norm: 1.8em;
+    --h4norm: 1.2em;
+    --h5norm: larger;
+    --pnorm: smaller;
+    }
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: var(--grey);
+    margin: 0;
+}
+
+body.dark-mode{
+    --white: rgb(80, 80, 80);
+    --grey: rgb(50, 50, 50);
+    --darkgrey: rgb(240, 240, 240);
+    --black: white;
+}
+
+body.big-l{
+    --h3norm: 2.2em;
+    --h4norm: 1.5em;
+    --h5norm: x-large;
+    --pnorm: medium;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+h3{
+    font-size: var(--h3norm);
+    font-weight: 590;
+    color: var(--black);
+}
+
+h4{
+    font-weight: lighter;
+    font-size: var(--h4norm);
+    color: var(--black);
+}
+
+h5{
+    font-size: var(--h5norm);
+    font-weight: 500;
+    color: var(--black);
+}
+
+h6{
+    color: var(--black);
+    font-size: var(--pnorm);
+}
+
+p{
+    font-size: var(--pnorm);
+    font-weight: lighter;
+    color: var(--black);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#header-background {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative; 
+    z-index: -1;
+    margin-top: 0;
+}
+
+header {
+    margin: 0;
+    padding: 1em;
+    background-color: var(--white);
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    width: 93%;
+    z-index: 10;
+    box-sizing: border-box;
+    font-size: var(--pnorm);
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+header ul li img {
+    height: 15px;
+    padding: 0.2em;
+}
+
+    /* Bewegende tekst */
+    header ul li:nth-child(2) {
+        overflow: hidden;
+        white-space: nowrap;
+        flex-grow: 1; /* Zodat de tekst ruimte krijgt tussen de iconen */
+        text-align: center;
+        position: relative;
+        color: var(--black);
+    }
+
+    /* De tekst die beweegt */
+    header ul li:nth-child(2) > div {
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 12s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+footer{
+    margin: 1em;
+    padding: 0;
+    position: sticky;
+    bottom: 1em;
+    max-width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+}   
+
+footer h3{
+    margin: 0;
+    margin-bottom: 0.05em;
+    padding-top: .3em;
+    padding-bottom: .2em;
+    padding-left: .5em;
+    background-color: var(--white);
+    border: solid var(--grey) 0.05em;
+}
+
+footer p{
+    text-align: center;
+    font-size: x-small;
+    margin: 0;
+    margin-bottom: 0.05em;
+    padding: 1.8em;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: smaller;
+    background-color: var(--white);
+    height: 3.3em;
+    border: solid var(--grey) 0.05em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+footer ul li img{
+    height: 2em;
+}
+
+footer ul li div{
+    color: var(--black);
+}
+
+#logo{
+    height: 3em;
+    border-radius: 50%;
+    left: 50%;
+}
+
+.rotate-on-scroll {
+    transition: transform 0.05s linear;
+}
+
+#top {
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 9em; 
+    width: 100%;
+    z-index: 5;
+}
+
+#top h1 {
+    color: var(--white);
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+#top h2 {
+    color: var(--white);
+    font-size: 29px;
+    letter-spacing: -1px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+#top a {
+    color: var(--black);
+    -webkit-text-stroke: 2px var(--white);
+    font-size: 29px;
+    letter-spacing: -1px;
+}
+
+.section1 {
+    display: flex;
+    gap: 1em;
+    overflow-x: auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#card1, #card2 {
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2em 2em max-content 2em;
+    max-width: 26.25em;
+    grid-gap: 1em;
+    padding: 1em;
+    padding-bottom: 1.5em;
+    box-sizing: border-box;
+    min-width: 26.25em;
+}
+
+#card1 h3, #card2 h3{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-left: 0.5em;
+}
+
+#card1 h4, #card2 h4 {
+    grid-row-start: 2;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0.5em;
+}
+
+#card1 img, #card2 img {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    max-width: 100%;
+    max-height: 18em;
+}
+
+#card2 img{
+    max-height: 259px;
+    width: 388px;
+    object-fit: cover;
+}
+
+#card1 button, #card2 button {
+    grid-row-start: 4;
+    background: var(--white);
+    border-style: solid;
+    border-color: var(--grey);
+    align-items: center;
+    height: 3em;
+    color: var(--black);
+}
+
+#card2 button{
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+
+article:nth-child(2){
+    background: var(--white);
+}
+
+.section2{
+    background: var(--white);
+    display: grid;
+}
+
+#section2heading{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 4em;
+}
+
+#section2heading h3{
+    transform: translateX(0.5em);
+    margin-left: 0.5em;
+}
+
+#section2heading h4{
+    box-sizing: border-box;
+    padding-top: 1.5em;
+    padding-left: 0.5em;
+}
+
+#viewall{
+    border-radius: 0;
+    border: 0;
+    height: 2.5em;
+    width: 5.5em;
+    align-self: center;
+    color: var(--black);
+}
+
+#section2heading button{
+    margin-left: 1.5em;
+}
+
+.section2cards {
+    display: flex;
+    justify-content: space-between; /* Verdeelt de items met ruimte ertussen */
+    width: 100%; /* Zorgt dat de container de volledige breedte van de pagina gebruikt */
+    gap: 1em; /* Zorgt voor ruimte tussen de items */
+    overflow-x: auto;
+    background: var(--white);
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.section2cards > * {
+    flex: 1 1 calc(25% - 1em); /* Maakt elk item 25% van de containerbreedte minus de gap */
+    box-sizing: border-box; /* Zodat padding en borders binnen de breedte vallen */
+    position: relative;
+}
+
+.section2cards li img{
+    width: 300px;
+    display: block;
+}
+
+.section2cards li button{
+    margin: 1em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0.8em;
+    margin: 0;
+    border: 0;
+    border-radius: 0%;
+    background: var(--white);
+    width: 90%;
+    height: 2em;
+    text-align: left;
+    color: var(--black);
+}
+
+.section3{
+    background: var(--white);
+}
+
+#section3heading{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 1em;
+    padding-bottom: 0em;
+    margin-top: 1em;
+    height: 4.5em;
+}
+
+#section3heading h3, #section3heading h4{
+    margin-left: 0.5em;
+}
+
+#section3heading button{
+    grid-column-start: 4;
+}
+
+.section3cards li{
+    display: block;
+    position: relative;
+    max-width: 420px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
+.section3cards li h5 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    background-image: linear-gradient(var(--black), rgba(0, 0, 0, 0));
+    padding: 1em;
+    top: -1.7em;
+    width: 83%;
+}
+
+.section3cards li img{
+    max-width: 100%;
+    display: block;
+}
+.section3cards li button {
+    position: absolute;
+    bottom: 2em; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    border: 0;
+    padding: 1em;
+    width: 84%;
+    text-align: left;
+    color: var(--black);
+}
+
+.section4 {
+    background: var(--white);
+    display: flex;
+    flex-wrap: nowrap; /* Voorkom dat items naar een nieuwe regel springen */
+    overflow-x: auto;
+    gap: 1em;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 100%;
+}
+
+.section4 li {
+    background: var(--grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 18em; /* Gebruik min-width om de breedte van elk item te behouden */
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.section4 li h3{
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.section4 li p {
+    text-align: center;
+    padding: 1em;
+}
+
+.section4 li img {
+    max-width: 18em; /* Behoud de maximale breedte van de afbeelding */
+    width: 100%; /* Zorg ervoor dat de afbeelding flexibel is binnen het item */
+}
+
+.section4 li button{
+    border: 0;
+    background: var(--white);
+    width: 98%;
+    height: 2em;
+    text-align: left;
+    color: var(--black);
+}
+
+.shopby{
+    display: flex;
+    gap: 1em;
+    overflow-x: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    padding-bottom: 0;
+    margin-top: 1em;
+    background-color: var(--white);
+}
+
+.shopbyheading{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    padding: 1em;
+}
+
+.shopbyheading h3{
+    margin: 0;
+}
+
+article .imagegrid{
+    background-color: var(--grey);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 1em;
+    padding-bottom: 6em;
+}
+
+.imagegrid img{
+    max-width: 7.5em;
+}
+
+.shopby button, .special button{
+    position: relative;
+    z-index: 1;
+    bottom: 4.8em;
+    background-color: var(--white);
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 1.3em;
+    width: 27.5em;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+}
+
+.btc{
+    background-color: var(--white);
+    padding-top: 1.2em;
+    margin-top: 1em;
+    padding-bottom: 2.5em;
+}
+
+.btc h3{
+    margin: 1em;
+}
+
+.btc li{
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 0.5em;
+}
+
+.btc li p{
+    background-color: var(--grey);
+    margin: 0.15em;
+    padding: 1.2em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    white-space: nowrap;
+}
+
+.section5{
+    max-width: 26.875em;
+    margin-top: 3em;
+}
+
+#section5heading{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#section5heading h3, h4{
+    margin: 0;
+}
+
+#section5heading button{
+    grid-column-start: 4;
+    background-color: var(--white);
+    width: 80%;
+}
+
+.editslide{
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    margin-bottom: 1em;
+    height: 30em;
+}
+
+#section5card{
+    display: block;
+    position: relative;
+    padding-top: 0;
+}
+
+#section5card img{
+    width: 100%;
+    height: max-content;
+}
+
+#section5card h3{
+    color: var(--white);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), var(--black));
+    position: absolute;
+    bottom: -1em;
+    width: 100%;
+    height: 2em;
+    padding-bottom: 0;
+    padding-left: 0.5em;
+    box-sizing: border-box;
+}
+
+.focus{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 1em;
+    padding-top: 1.7em;
+    padding-bottom: 3em;
+}
+
+.focus img{
+    height: 8em;
+    width: 6.3em;
+}
+
+.section5 button{
+    background-color: var(--white);
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 2em;
+    padding: 1.3em;
+    width: 30em;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+}
+
+.helpme{
+    display: grid;
+    margin: 1em;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+.helpme h3{
+    background-color: var(--white);
+    padding-left: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.3em;
+    margin: 0;
+    margin-bottom: 0.5em;
+    border: solid 1px var(--grey);
+}
+
+.helpme .content p{
+    background-color: var(--white);
+}
+
+.content{
+    margin-bottom: 2em;
+}
+
+.content p{
+    background-color: var(--grey);
+    padding: 1.2em;
+    margin-top: 0.1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    box-sizing: border-box;
+}
+
+.footersection{
+    margin: 1em;
+    margin-top: 0;
+    border: solid 1px var(--grey);
+}
+
+.footersection h3{
+    margin: 0;
+    margin-bottom: 0.5em;
+    color: var(--black);
+}
+
+.footersection li{
+    background: var(--white);
+    padding: 1em;
+}
+
+.footersection li img{
+    width: 22em;
+    margin-left: 0.5em;
+}
+
+#email, #genderman, #genderwoman, #agree{
+    font-size: var(--pnorm);
+    color: var(--black);
+}
+
+#email{
+    color: var(--darkgrey);
+    width: 100%;
+    height: 3em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-color: var(--darkgrey);
+    border-style: solid;
+}
+
+#agree{
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+}
+
+#subscribe{
+    color: var(--white);
+    background-color: var(--darkgrey);
+    border: 0;
+    height: 4em;
+    width: 100%;
+}
+
+.final{
+    background-color: var(--white);
+    margin: 1em;
+}
+
+.greybox{
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+.greybox p{
+    background-color: var(--grey);
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 0.1em;
+    padding: 1em;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+}
+
+.dox{
+    padding: 1em;
+    padding-top: 1.5em;
+}
+
+
+/* hier begint de css code voor elementen van productpagina die verdere styling nodig hadden*/
+
+
+#product{
+    background-color: var(--white);
+}
+
+.slideshow{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Voor smooth scrollen tussen afbeeldingen */
+    width: 100vw;
+}
+
+.slideshow img{
+    width: 430px;
+    flex-shrink: 0; /* Voorkomt dat afbeeldingen krimpen */
+    scroll-snap-align: start;
+}
+
+.slideshow::-webkit-scrollbar{
+    display: none;
+}
+
+.description{
+    box-sizing: border-box;
+    padding: 1em;
+    background-color: var(--white);
+    margin-bottom: 5em;
+}
+
+.description p{
+    padding-left: 1em;
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+.description h3{
+    padding-left: 0.5em;
+    margin-bottom: 0;
+}
+
+#prize{
+    font-weight: normal;
+    padding-top: 1em;
+}
+
+#bordered{
+    margin-bottom: 1em;
+}
+ 
+#bordered p{
+    border: 1px solid var(--grey);
+    padding: 1em;
+    margin: 0;
+}
+
+#boxed p{
+    background-color: var(--grey);
+    padding: 1em;
+    margin: 0;
+    margin-top: 0.1em;
+    font-weight: normal;
+}
+
+.sugg{
+    display: flex;
+    padding-left: 1em;
+}
+
+.sugg h3{
+    padding-left: 0.5em;
+    padding-right: 0.2em;
+    margin: 0;
+}
+
+.recom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.recom li{
+    display: grid;
+    background-color: var(--grey);
+}
+
+.recom li img{
+    width: 100%;
+    padding-bottom: 2em;
+}
+
+.recom li h6, .recom li p, .recom li button{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.recom h6, p{
+    margin: 0;
+}
+
+.recom h6{
+    margin-bottom: 0.5em;
+}
+
+#quick{
+    border: 0.1px solid var(--darkgrey);
+    height: 2em;
+    background-color: var(--white);
+    margin-top: 1em;
+    margin: 1em;
+    color: var(--black);
+}
+
+.specialheading{
+    display: flex;
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+.specialheading h3{
+    margin-bottom: 0;
+    margin-right: 0.5em;
+}
+
+.specialheading h4{
+    margin-top: 1.5em;
+}
+
+.specialgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-top: 1.7em;
+    padding-bottom: 5em;
+    background-color: var(--grey);
+    margin: 1em;
+}
+
+.special img{
+    height: 8em;
+    width: 6em;
+}
+
+.special button{
+    margin-left: 2.4em;
+    bottom: 6em;
+}
+
+#mode-toggle{
+    margin: 1em;
+    margin-top: 0;
+    padding: 1em;
+    background: var(--black);
+    color: var(--white);
+    box-shadow: 1p 2px var(--darkgrey);
+    border: none;
+    text-align: center;
+    border-radius: 0.5em;
+}
+
+#big-l{
+    margin: 1em;
+    margin-top: 0;
+    padding: 1em;
+    background: var(--black);
+    color: var(--white);
+    box-shadow: 1p 2px var(--darkgrey);
+    border: none;
+    text-align: center;
+    border-radius: 0.5em;
+}
+
+
+.added{
+    color: white;
+    background-color: green;
+    opacity: 1; /* Begin met volledige zichtbaarheid */
+    transition: opacity 1s ease; /* Voeg een transitie-effect toe voor de opacity */
+}
+
+.fade-out {
+    opacity: 0; /* Maak het element onzichtbaar */
+}
