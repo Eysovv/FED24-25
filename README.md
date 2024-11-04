@@ -40,11 +40,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   (https://nl.slamjam.com/products/our-legacy-clothing-full-zip-hood-brown-j296927?pr_prod_strat=e5_desc&pr_rec_id=99c7c0181&pr_rec_pid=8938811556045&pr_ref_pid=8932148347085&pr_seq=uniform)
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/nl.slamjam.com_(iPhone 14 Pro Max).png" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/nl.slamjam.com_products_our-legacy-clothing-full-zip-hood-brown-j296927(iPhone 14 Pro Max).png" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
