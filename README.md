@@ -188,6 +188,7 @@ niet aanwezig geweest
      - https://chatgpt.com/share/66f87266-cf30-800a-ab5a-9b37f6641f75
      - https://chatgpt.com/share/66f8728d-2cd0-800a-a5b8-710770fa0bf7
      - https://chatgpt.com/share/66f872bd-e288-800a-b1fc-a86608c8d2f4
+     - https://chatgpt.com/share/6728d054-0a28-800a-a74f-5586a7223c35
   3. ( W3Schools online HTML editor. (z.d.). https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_script_src
   4. (link hyperlinks) W3Schools.com. (z.d.). https://www.w3schools.com/html/html_links.asp
   5. Scrollbar verwijderen op horizontaal scrollbare secties
