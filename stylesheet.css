@@ -318,7 +318,7 @@ article:nth-child(2){
     padding-left: 0.5em;
 }
 
-#viewall{
+.viewall{
     border-radius: 0;
     border: 0;
     height: 2.5em;
@@ -780,7 +780,7 @@ article .imagegrid{
     margin-bottom: 0;
 }
 
-#prize{
+.prize{
     font-weight: normal;
     padding-top: 1em;
 }
@@ -846,7 +846,7 @@ article .imagegrid{
     margin-bottom: 0.5em;
 }
 
-#quick{
+.quick{
     border: 0.1px solid var(--darkgrey);
     height: 2em;
     background-color: var(--white);
